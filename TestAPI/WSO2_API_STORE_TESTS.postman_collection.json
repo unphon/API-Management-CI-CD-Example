@@ -189,7 +189,7 @@
 			"method": "GET",
 			"data": null,
 			"dataMode": "params",
-			"tests": "var jsonData = JSON.parse(responseBody);\n\nif(jsonData.keys.length === 0){\n  postman.setNextRequest(\"Generate Application Keys\");\n}else{\n    postman.setEnvironmentVariable(\"api_consumer_key\", jsonData.keys[0].consumerKey);\n    postman.setEnvironmentVariable(\"api_consumer_secret\", jsonData.keys[0].consumerSecret);\n    postman.setNextRequest(\"Generate Access Token\");\n}\n\n\n\n",
+			"tests": "var jsonData = JSON.parse(responseBody);\n\nif(jsonData.length === 0){\n  postman.setNextRequest(\"Generate Application Keys\");\n}else{\n    postman.setEnvironmentVariable(\"api_consumer_key\", jsonData.keys[0].consumerKey);\n    postman.setEnvironmentVariable(\"api_consumer_secret\", jsonData.keys[0].consumerSecret);\n    postman.setNextRequest(\"Generate Access Token\");\n}\n\n\n\n",
 			"currentHelper": "normal",
 			"helperAttributes": {},
 			"time": 1521701936794,
